@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://crispino.github.io/"/>
-  <updated>2018-09-07T00:41:44.288Z</updated>
+  <updated>2018-09-07T06:23:30.597Z</updated>
   <id>http://crispino.github.io/</id>
   
   <author>
@@ -15,6 +15,157 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu 16.04 安装 samba</title>
+    <link href="http://crispino.github.io/2016/11/15/ubuntu16.04%E5%AE%89%E8%A3%85samba/"/>
+    <id>http://crispino.github.io/2016/11/15/ubuntu16.04安装samba/</id>
+    <published>2016-11-15T02:12:36.000Z</published>
+    <updated>2018-09-07T06:23:30.597Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install samba</span><br><span class="line">cd /etc/samba</span><br><span class="line">sudo cp smb.conf smb.conf.bak</span><br><span class="line">sudo vi smb.conf</span><br></pre></td></tr></table></figure><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> crispin samba</span><br><span class="line">[RootFS]</span><br><span class="line">comment = Root filesystem</span><br><span class="line">path = /</span><br><span class="line">browseable = yes</span><br><span class="line">writable = yes</span><br><span class="line">valid users = crispin</span><br></pre></td></tr></table></figure><h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser usrsamba (crispin安装时已经添加了，可以不执行该命令)</span><br><span class="line">sudo smbpasswd -a usrsamba</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://crispino.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="samba" scheme="http://crispino.github.io/tags/samba/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>骇客交锋</title>
+    <link href="http://crispino.github.io/2015/06/15/%E9%AA%87%E5%AE%A2%E4%BA%A4%E9%94%8B/"/>
+    <id>http://crispino.github.io/2015/06/15/骇客交锋/</id>
+    <published>2015-06-15T02:12:30.000Z</published>
+    <updated>2018-09-07T07:00:56.755Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>在影评家的心目中，迈克尔·曼的《骇客交锋》并不是什么杰作。但是，当 Google Chrome 安全团队的主管 Parisa Tabriz 组织了 200 多名安全专家观看了首映之后，这些人一致认为，它是一部不错的电影，甚至可能是最好的黑客电影之一。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在影评家的心目中，迈克尔·曼的《骇客交锋》并不是什么杰作。但是，当 Google Chrome 安全团队的主管 Parisa Tabriz 组织了 200 多名安全专家观看了首映之后，这些人一致认为，它是一部不错的电影，甚至可能是最好的黑客电影之一
+      
+    
+    </summary>
+    
+      <category term="娱乐" scheme="http://crispino.github.io/categories/%E5%A8%B1%E4%B9%90/"/>
+    
+    
+      <category term="电影" scheme="http://crispino.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MT7628an WPS配置命令</title>
+    <link href="http://crispino.github.io/2015/04/19/MT7628an%20WPS%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4/"/>
+    <id>http://crispino.github.io/2015/04/19/MT7628an WPS配置命令/</id>
+    <published>2015-04-19T03:01:30.000Z</published>
+    <updated>2018-09-07T06:48:44.648Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Server-Registrar"><a href="#Server-Registrar" class="headerlink" title="Server / Registrar"></a>Server / Registrar</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iwpriv ra0 set WscConfMode=7</span><br><span class="line">iwpriv ra0 set WscMode=2</span><br><span class="line">iwpriv ra0 set WscGetConf=1</span><br></pre></td></tr></table></figure><h2 id="Client-Enrollee"><a href="#Client-Enrollee" class="headerlink" title="Client /Enrollee"></a>Client /Enrollee</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ifconfig apcli0 up</span><br><span class="line">iwpriv apcli0 set WscConfMode=1</span><br><span class="line">iwpriv apcli0 set WscMode=2</span><br><span class="line">iwpriv apcli0 set WscGetConf=1</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Server-Registrar&quot;&gt;&lt;a href=&quot;#Server-Registrar&quot; class=&quot;headerlink&quot; title=&quot;Server / Registrar&quot;&gt;&lt;/a&gt;Server / Registrar&lt;/h2&gt;&lt;figure class
+      
+    
+    </summary>
+    
+      <category term="工作" scheme="http://crispino.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="WPS" scheme="http://crispino.github.io/tags/WPS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Openwrt文件系统中/etc/config配置文件的动态生成</title>
+    <link href="http://crispino.github.io/2015/04/12/Openwrt%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%ADconfig%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90/"/>
+    <id>http://crispino.github.io/2015/04/12/Openwrt文件系统中config配置文件的动态生成/</id>
+    <published>2015-04-12T03:01:30.000Z</published>
+    <updated>2018-09-07T06:34:49.777Z</updated>
+    
+    <content type="html"><![CDATA[<p>openwrt的network文件，或者说是在/etc/config目录下的文件，都是动态生成的。 脚本的函数定义在package/base-files/files/lib/functions目录中，有以下几个文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ouyangping@ubuntu:~/openwrt-3.10.14/package/base-files/files/lib/functions$ ls</span><br><span class="line">leds.sh network.sh preinit.sh service.sh system.sh uci-defaults.sh</span><br></pre></td></tr></table></figure><p>其中uci-default.sh会生成默认的/et/config目录下的文件，而其他文件是它的<code>库</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;openwrt的network文件，或者说是在/etc/config目录下的文件，都是动态生成的。 脚本的函数定义在package/base-files/files/lib/functions目录中，有以下几个文件：&lt;/p&gt;
+&lt;figure class=&quot;highlight
+      
+    
+    </summary>
+    
+      <category term="工作" scheme="http://crispino.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="openwrt" scheme="http://crispino.github.io/tags/openwrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Keep It Simple, Stupid!</title>
+    <link href="http://crispino.github.io/2012/05/09/Keep%20It%20Simple,Stupid!/"/>
+    <id>http://crispino.github.io/2012/05/09/Keep It Simple,Stupid!/</id>
+    <published>2012-05-09T02:51:31.000Z</published>
+    <updated>2018-09-07T07:19:11.917Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Subject-Focus-on-Problems-vs-Focus-on-Solutions-–-Don’t-miss-reading"><a href="#Subject-Focus-on-Problems-vs-Focus-on-Solutions-–-Don’t-miss-reading" class="headerlink" title="Subject: Focus on Problems vs. Focus on Solutions – Don’t miss reading"></a>Subject: Focus on Problems vs. Focus on Solutions – Don’t miss reading</h2><blockquote><p><strong>One of the most memorable case studies on Japanese management was the case of the empty soap box, which happened in one of Japan’s biggest cosmetics companies. The company received a complaint that a consumer had bought a soap box that was empty. Immediately the authorities isolated the problem to the assembly line, which transported all the packaged soap to the delivery department. For some reason, one soap box went through the assembly line empty. Management asked its engineers to solve the problem.</strong></p><p>Post-haste, the engineers worked hard to devise an X-ray machine with high-resolution monitors manned by two people to watch all the soap boxes that passed through the line to make sure they were not empty. No doubt, they worked hard and they worked fast but they spent whoopee amount to do so.</p><p>But when a rank-and-file employee in a small company was posed with the same problem, did not get into complications of X-rays, etc but instead came out with another solution. He bought a strong industrial electric fan and pointed it at the assembly line. He switched the fan on, and as each soap box passed the fan, it simply blew the empty boxes out of the line.<br>Moral of the story: KISS (Keep It Simple,Stupid) i.e. always look for simple solutions. Devise the simplest possible solution that solves the problem.</p><p><strong>When NASA began the launch of astronauts into space, they found out that the pens wouldn’t work at zero gravity (Ink won’t flow down to the writing surface).</strong></p><p>In order to solve this problem, it took them one decade and $12 million. They developed a pen that worked at zero gravity, upside down, underwater, in practically any surface including crystal and in a temperature range from below freezing to over 300 degrees C.</p></blockquote><p><strong>And what did Russians do ………………………??</strong><br>Guest it!!<br>ANSWER: The Russians <code>used a Pencil</code> !!!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Subject-Focus-on-Problems-vs-Focus-on-Solutions-–-Don’t-miss-reading&quot;&gt;&lt;a href=&quot;#Subject-Focus-on-Problems-vs-Focus-on-Solutions-–-Do
+      
+    
+    </summary>
+    
+    
+      <category term="态度" scheme="http://crispino.github.io/tags/%E6%80%81%E5%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老鼠试毒瓶问题</title>
+    <link href="http://crispino.github.io/2012/04/05/%E8%80%81%E9%BC%A0%E8%AF%95%E6%AF%92%E7%93%B6%E9%97%AE%E9%A2%98/"/>
+    <id>http://crispino.github.io/2012/04/05/老鼠试毒瓶问题/</id>
+    <published>2012-04-05T05:12:30.000Z</published>
+    <updated>2018-09-07T05:24:34.748Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote><p>有 1000 个一模一样的瓶子，其中有 999 瓶是普通的水，有一瓶是毒药。任何喝下毒药的生物都会在一星期之后死亡。现在，你只有 10 只小白鼠和一星期的时间，如何检验出哪个瓶子里有毒药？</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><blockquote><p>这个问题的答案也堪称经典：把瓶子从 0 到 999 依次编号，然后全部转换为 10 位二进制数。让第一只老鼠喝掉1到1000所有二进制数右起第一位是 1 的瓶子，让第二只老鼠喝掉所有二进制数右起第二位是 1 的瓶子，等等。一星期后，如果第一只老鼠死了，就知道毒药瓶子的二进制编号中，右起第一位是 1 ；如果第二只老鼠没死，就知道毒药瓶子的二进制编号中，右起第二位是 0 ……每只老鼠的死活都能确定出 10 位二进制数的其中一位，由此便可知道毒药瓶子的编号了。</p></blockquote><h2 id="进一步"><a href="#进一步" class="headerlink" title="进一步"></a>进一步</h2><p>现在，有意思的问题来了：如果你有两个星期的时间（换句话说你可以做两轮实验），为了从 1000 个瓶子中找出毒药，你最少需要几只老鼠？注意，在第一轮实验中死掉的老鼠，就无法继续参与第二次实验了。</p><blockquote><p>答案：7 只老鼠就足够了。事实上，7 只老鼠足以从 3^7 = 2187 个瓶子中找出毒药来。首先，把所有瓶子从 0 到 2186 编号，然后全部转换为 7 位三进制数。现在，让第一只老鼠喝掉所有三进制数右起第一位是 2 的瓶子，让第二只老鼠喝掉所有三进制数右起第二位是 2 的瓶子，等等。一星期之后，如果第一只老鼠死了，就知道毒药瓶子的三进制编号中，右起第一位是 2 ；如果第二只老鼠没死，就知道毒药瓶子的三进制编号中，右起第二位不是 2，只可能是 0 或者 1 ……也就是说，每只死掉的老鼠都用自己的生命确定出了，三进制编号中自己负责的那一位是 2 ；但每只活着的老鼠都只能确定，它所负责的那一位不是 2 。于是，问题就归约到了只剩一个星期时的情况。在第二轮实验里，让每只活着的老鼠继续自己未完成的任务，喝掉它负责的那一位是 1 的所有瓶子。再过一星期，毒药瓶子的三进制编号便能全部揭晓了。</p></blockquote><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>类似地，我们可以证明， n 只小白鼠 t 周的时间可以从 (t+1)^n 个瓶子中检验出毒药来。</p><p>总结：<code>时间换取资源</code>(老鼠)。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;有 1000 个一模一样的瓶子，其中有 999 瓶是普通的水，有一瓶是毒药。任何喝下毒药的生物都会在一星期之后死亡
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://crispino.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://crispino.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Build NFS Environment</title>

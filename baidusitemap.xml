@@ -3,6 +3,123 @@
 
 
     
+  <url>
+    <loc>http://crispino.github.io/2012/05/09/Keep%20It%20Simple,Stupid!/</loc>
+    <lastmod>2018-09-07T07:19:11.917Z</lastmod>
+    <data>
+        <display>
+        <title>Keep It Simple, Stupid!</title>
+        <pubTime>2012-05-09T02:51:31.000Z</pubTime>
+        
+        <tag>态度</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://crispino.github.io/2015/06/15/%E9%AA%87%E5%AE%A2%E4%BA%A4%E9%94%8B/</loc>
+    <lastmod>2018-09-07T07:00:56.755Z</lastmod>
+    <data>
+        <display>
+        <title>骇客交锋</title>
+        <pubTime>2015-06-15T02:12:30.000Z</pubTime>
+        
+        <tag>电影</tag>
+         
+         
+           
+             
+              <breadCrumb title="娱乐" url="http://crispino.github.io/categories/%E5%A8%B1%E4%B9%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://crispino.github.io/2015/04/19/MT7628an%20WPS%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-09-07T06:48:44.648Z</lastmod>
+    <data>
+        <display>
+        <title>MT7628an WPS配置命令</title>
+        <pubTime>2015-04-19T03:01:30.000Z</pubTime>
+        
+        <tag>WPS</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作" url="http://crispino.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://crispino.github.io/2015/04/12/Openwrt%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%ADconfig%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90/</loc>
+    <lastmod>2018-09-07T06:34:49.777Z</lastmod>
+    <data>
+        <display>
+        <title>Openwrt文件系统中/etc/config配置文件的动态生成</title>
+        <pubTime>2015-04-12T03:01:30.000Z</pubTime>
+        
+        <tag>openwrt</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作" url="http://crispino.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://crispino.github.io/2016/11/15/ubuntu16.04%E5%AE%89%E8%A3%85samba/</loc>
+    <lastmod>2018-09-07T06:23:30.597Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 16.04 安装 samba</title>
+        <pubTime>2016-11-15T02:12:36.000Z</pubTime>
+        
+        <tag>samba</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://crispino.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://crispino.github.io/2012/04/05/%E8%80%81%E9%BC%A0%E8%AF%95%E6%AF%92%E7%93%B6%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-09-07T05:24:34.748Z</lastmod>
+    <data>
+        <display>
+        <title>老鼠试毒瓶问题</title>
+        <pubTime>2012-04-05T05:12:30.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://crispino.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://crispino.github.io/2009/09/02/Wireshark%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3/</loc>
