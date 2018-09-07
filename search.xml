@@ -3,53 +3,66 @@
   
     
     <entry>
-      <title><![CDATA[你好呀]]></title>
-      <url>/2018/02/03/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E5%91%80/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> test1</li>
-<li style="list-style: none"><input type="checkbox" checked> test2<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+      <title>Build NFS Environment</title>
+      <link href="/2009/10/12/Build%20NFS%20Environment/"/>
+      <url>/2009/10/12/Build%20NFS%20Environment/</url>
+      <content type="html"><![CDATA[<h2 id="Board-NFS-client"><a href="#Board-NFS-client" class="headerlink" title="Board - NFS client"></a>Board - NFS client</h2><h3 id="linux-kernel"><a href="#linux-kernel" class="headerlink" title="linux kernel"></a>linux kernel</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File system -&gt; Network File System -&gt; NFS client support</span><br><span class="line">[*] NFS client support for NFS version 3</span><br><span class="line">[*]  NFS client support for the NFSv3 ACL protocol externel</span><br></pre></td></tr></table></figure><h3 id="busybox"><a href="#busybox" class="headerlink" title="busybox"></a>busybox</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Linux System Utilities -&gt; mount</span><br><span class="line">[*] Support mounting NFS file systems</span><br></pre></td></tr></table></figure><h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o nolock 192.168.1.25:/home/crispin/rtl819x/users/boa/html /web</span><br></pre></td></tr></table></figure><h2 id="PC-NFS-server"><a href="#PC-NFS-server" class="headerlink" title="PC - NFS server"></a>PC - NFS server</h2><h3 id="install-software"><a href="#install-software" class="headerlink" title="install software"></a>install software</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nfs-kerenel-server nfs-common rpcbind</span><br></pre></td></tr></table></figure><h3 id="create-shared-path"><a href="#create-shared-path" class="headerlink" title="create shared path"></a>create shared path</h3><h3 id="configure-nfs-file"><a href="#configure-nfs-file" class="headerlink" title="configure nfs file"></a>configure nfs file</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add &apos;/home/crispin/rtl819x/users/boa/html * (rw, sync)&apos; to &apos;/etc/exports&apos;</span><br></pre></td></tr></table></figure><h3 id="start-nfs-server"><a href="#start-nfs-server" class="headerlink" title="start nfs server"></a>start nfs server</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/nfs-kernel-server restart</span><br><span class="line">sudo exportfs -a</span><br></pre></td></tr></table></figure>]]></content>
       
-        
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
         <tags>
             
-            <tag> new22 </tag>
+            <tag> NFS </tag>
             
         </tags>
-        
+      
     </entry>
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2018/01/03/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+      <title>wireshark找不到网络接口的处理方法</title>
+      <link href="/2009/09/02/Wireshark%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3/"/>
+      <url>/2009/09/02/Wireshark%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3/</url>
+      <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start npf</span><br></pre></td></tr></table></figure><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><blockquote><p>安装libpcap时选中开机启动</p></blockquote>]]></content>
       
-        
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
         <tags>
             
-            <tag> new </tag>
+            <tag> wireshark </tag>
             
         </tags>
-        
+      
+    </entry>
+    
+    <entry>
+      <title>Vim和Source Insight切换</title>
+      <link href="/2009/08/15/Vim%E5%92%8CSource%20Insight%E5%88%87%E6%8D%A2/"/>
+      <url>/2009/08/15/Vim%E5%92%8CSource%20Insight%E5%88%87%E6%8D%A2/</url>
+      <content type="html"><![CDATA[<h2 id="Source-Insight"><a href="#Source-Insight" class="headerlink" title="Source Insight"></a>Source Insight</h2><blockquote><p>在Source Insight中按F12调用gvim，打开对应文件，跳转到对应的行</p></blockquote><p><em>Step by step:</em><br>1.<code>Tools -&gt; Custom Commands... -&gt; Add..., New Command name</code> 随便写,我的是”Edit with Vim”<br>2.Run中写入 <code>&quot;D:\Programs\Vim\vim80\gvim.exe&quot; --remote-silent +%l %f</code><br>意思是在当前已经打开的gvim窗口里面打开当前的文件,并且跳转到指定行<br>%l为当前的行号,%f为文件名<br>使用 –remote-silent 的作用是,如果已经打开了对应文件,就不会打开第二次,而是在已经打开的文件里跳转到对应行<br>3.还是同一个对话框里面,选择<code>Keys-&gt;Assign New Key...-&gt;按F12</code>,如果你已经将F12设置给其他命令,选择其他的按键就行了<br>4.设置完毕</p><h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p>在vim中调用source insight打开对应的文件:</p><blockquote><p><code>nnoremap &lt;silent&gt; &lt;F12&gt; :!start &quot;C:\Programs\Source Insight 4.0\sourceinsight4.exe&quot; -i +&lt;C-R&gt;=expand(line(&quot;.&quot;))&lt;CR&gt; %&lt;CR&gt;</code></p></blockquote><p>1.一定要加上start,否则调用source insight时弹出讨厌的dos窗口<br>2.-i表示在已经打开的souce insight中打开<br>3.+后面的部分是指定行号</p><p>这样使用F12就可以在vim和source insight之间切换了 :)</p>]]></content>
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
     </entry>
     
   

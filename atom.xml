@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Crispin - Embedded Software Developer</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://crispino.github.io/"/>
+  <updated>2018-09-07T00:41:44.288Z</updated>
+  <id>http://crispino.github.io/</id>
+  
+  <author>
+    <name>Crispin Au</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Build NFS Environment</title>
+    <link href="http://crispino.github.io/2009/10/12/Build%20NFS%20Environment/"/>
+    <id>http://crispino.github.io/2009/10/12/Build NFS Environment/</id>
+    <published>2009-10-12T08:12:36.000Z</published>
+    <updated>2018-09-07T00:41:44.288Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Board-NFS-client"><a href="#Board-NFS-client" class="headerlink" title="Board - NFS client"></a>Board - NFS client</h2><h3 id="linux-kernel"><a href="#linux-kernel" class="headerlink" title="linux kernel"></a>linux kernel</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File system -&gt; Network File System -&gt; NFS client support</span><br><span class="line">[*] NFS client support for NFS version 3</span><br><span class="line">[*]  NFS client support for the NFSv3 ACL protocol externel</span><br></pre></td></tr></table></figure><h3 id="busybox"><a href="#busybox" class="headerlink" title="busybox"></a>busybox</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Linux System Utilities -&gt; mount</span><br><span class="line">[*] Support mounting NFS file systems</span><br></pre></td></tr></table></figure><h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o nolock 192.168.1.25:/home/crispin/rtl819x/users/boa/html /web</span><br></pre></td></tr></table></figure><h2 id="PC-NFS-server"><a href="#PC-NFS-server" class="headerlink" title="PC - NFS server"></a>PC - NFS server</h2><h3 id="install-software"><a href="#install-software" class="headerlink" title="install software"></a>install software</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nfs-kerenel-server nfs-common rpcbind</span><br></pre></td></tr></table></figure><h3 id="create-shared-path"><a href="#create-shared-path" class="headerlink" title="create shared path"></a>create shared path</h3><h3 id="configure-nfs-file"><a href="#configure-nfs-file" class="headerlink" title="configure nfs file"></a>configure nfs file</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add &apos;/home/crispin/rtl819x/users/boa/html * (rw, sync)&apos; to &apos;/etc/exports&apos;</span><br></pre></td></tr></table></figure><h3 id="start-nfs-server"><a href="#start-nfs-server" class="headerlink" title="start nfs server"></a>start nfs server</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/nfs-kernel-server restart</span><br><span class="line">sudo exportfs -a</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Board-NFS-client&quot;&gt;&lt;a href=&quot;#Board-NFS-client&quot; class=&quot;headerlink&quot; title=&quot;Board - NFS client&quot;&gt;&lt;/a&gt;Board - NFS client&lt;/h2&gt;&lt;h3 id=&quot;linux
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://crispino.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="NFS" scheme="http://crispino.github.io/tags/NFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wireshark找不到网络接口的处理方法</title>
+    <link href="http://crispino.github.io/2009/09/02/Wireshark%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://crispino.github.io/2009/09/02/Wireshark找不到网络接口/</id>
+    <published>2009-09-02T05:42:32.000Z</published>
+    <updated>2018-09-07T00:41:57.179Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start npf</span><br></pre></td></tr></table></figure><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><blockquote><p>安装libpcap时选中开机启动</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;sp
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://crispino.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="wireshark" scheme="http://crispino.github.io/tags/wireshark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim和Source Insight切换</title>
+    <link href="http://crispino.github.io/2009/08/15/Vim%E5%92%8CSource%20Insight%E5%88%87%E6%8D%A2/"/>
+    <id>http://crispino.github.io/2009/08/15/Vim和Source Insight切换/</id>
+    <published>2009-08-15T08:12:36.000Z</published>
+    <updated>2018-09-07T00:41:51.497Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Source-Insight"><a href="#Source-Insight" class="headerlink" title="Source Insight"></a>Source Insight</h2><blockquote><p>在Source Insight中按F12调用gvim，打开对应文件，跳转到对应的行</p></blockquote><p><em>Step by step:</em><br>1.<code>Tools -&gt; Custom Commands... -&gt; Add..., New Command name</code> 随便写,我的是”Edit with Vim”<br>2.Run中写入 <code>&quot;D:\Programs\Vim\vim80\gvim.exe&quot; --remote-silent +%l %f</code><br>意思是在当前已经打开的gvim窗口里面打开当前的文件,并且跳转到指定行<br>%l为当前的行号,%f为文件名<br>使用 –remote-silent 的作用是,如果已经打开了对应文件,就不会打开第二次,而是在已经打开的文件里跳转到对应行<br>3.还是同一个对话框里面,选择<code>Keys-&gt;Assign New Key...-&gt;按F12</code>,如果你已经将F12设置给其他命令,选择其他的按键就行了<br>4.设置完毕</p><h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p>在vim中调用source insight打开对应的文件:</p><blockquote><p><code>nnoremap &lt;silent&gt; &lt;F12&gt; :!start &quot;C:\Programs\Source Insight 4.0\sourceinsight4.exe&quot; -i +&lt;C-R&gt;=expand(line(&quot;.&quot;))&lt;CR&gt; %&lt;CR&gt;</code></p></blockquote><p>1.一定要加上start,否则调用source insight时弹出讨厌的dos窗口<br>2.-i表示在已经打开的souce insight中打开<br>3.+后面的部分是指定行号</p><p>这样使用F12就可以在vim和source insight之间切换了 :)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Source-Insight&quot;&gt;&lt;a href=&quot;#Source-Insight&quot; class=&quot;headerlink&quot; title=&quot;Source Insight&quot;&gt;&lt;/a&gt;Source Insight&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在Source I
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://crispino.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="vim" scheme="http://crispino.github.io/tags/vim/"/>
+    
+  </entry>
+  
+</feed>
